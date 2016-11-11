@@ -3,7 +3,7 @@ package suzp1984.github.io.jbig_kotlin
 import android.app.Application
 
 /**
- * Created by suzhenxi on 11/11/2016.
+ * Created by moses on 11/11/2016.
  */
 
 class JbigApplication : Application() {
