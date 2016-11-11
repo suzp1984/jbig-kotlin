@@ -19,6 +19,7 @@ abstract class BaseDrawerActivity : AppCompatActivity() {
         val parent : FrameLayout = findViewById(R.id.content) as FrameLayout
         LayoutInflater.from(this).inflate(layoutId, parent, true)
 
+        injectView()
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
