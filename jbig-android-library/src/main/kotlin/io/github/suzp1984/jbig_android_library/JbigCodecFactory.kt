@@ -10,9 +10,9 @@ class JbigCodecFactory {
 
     fun getJbigCodec(codec: CODEC): JbigCodec? {
         when (codec) {
-            CODEC.JNI_CODEC -> return JniJbigCodec();
+            CODEC.JNI_CODEC -> return JniJbigCodec()
         }
 
-        return null;
+        return null
     }
 }
