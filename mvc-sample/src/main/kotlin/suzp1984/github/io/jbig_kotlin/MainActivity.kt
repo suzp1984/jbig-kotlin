@@ -1,7 +1,7 @@
 package suzp1984.github.io.jbig_kotlin
 
 import android.os.Bundle
-import android.widget.TextView
+
 import butterknife.BindView
 import suzp1984.github.io.jbig_kotlin.widget.SwipeControlViewPager
 
@@ -14,5 +14,13 @@ class MainActivity : BaseDrawerActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         
+    }
+
+    fun selectPaintTab() {
+
+    }
+
+    fun selectDecodeTab() {
+
     }
 }
