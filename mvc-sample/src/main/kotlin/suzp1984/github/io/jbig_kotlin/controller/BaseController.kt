@@ -6,7 +6,7 @@ import suzp1984.github.io.jbig_kotlin.display.IDisplay
  * Created by suzhenxi on 11/28/2016.
  */
 
-internal abstract class BaseController {
+abstract class BaseController {
     protected var mDisplay: IDisplay? = null
 
     var isInited: Boolean = false

@@ -9,7 +9,7 @@ import dagger.internal.Preconditions
  * Created by suzhenxi on 11/28/2016.
  */
 
-internal abstract class BaseUiController<U : BaseUiController.Ui<UC>, UC> : BaseController() {
+abstract class BaseUiController<U : BaseUiController.Ui<UC>, UC> : BaseController() {
 
     private val mUis: MutableSet<U>
     private val mUnmodifiableUis: Set<U>

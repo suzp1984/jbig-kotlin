@@ -14,10 +14,8 @@ import suzp1984.github.io.jbig_kotlin.states.JbigDbState
  * Created by suzhenxi on 11/28/2016.
  */
 
-@Singleton
-class MainController
-@Inject
-constructor(state: ApplicationState, controller: JbigController) : BaseUiController<MainController.MainControllerUi, MainController.MainControllerUiCallback>() {
+class MainController(state: ApplicationState, controller: JbigController) :
+        BaseUiController<MainController.MainControllerUi, MainController.MainControllerUiCallback>() {
 
     enum class TabItem {
         PAINT_TAB, DECODER_TAB
@@ -32,7 +30,7 @@ constructor(state: ApplicationState, controller: JbigController) : BaseUiControl
         jbigController = Preconditions.checkNotNull(controller, "JbigController cannot be null.")
     }
 
-    internal fun createUiCallbacks(ui: MainControllerUi): MainControllerUiCallback {
+    override fun createUiCallbacks(ui: MainControllerUi): MainControllerUiCallback {
         return object : MainControllerUiCallback {
             override fun onTabItemSelected(item: TabItem) {
                 val display = getDisplay()
@@ -45,25 +43,25 @@ constructor(state: ApplicationState, controller: JbigController) : BaseUiControl
         }
     }
 
-    internal fun onUiAttached(ui: MainControllerUi) {
+    override fun onUiAttached(ui: MainControllerUi) {
 
     }
 
-    internal fun onUiDetached(ui: MainControllerUi) {
+    override fun onUiDetached(ui: MainControllerUi) {
 
     }
 
-    internal fun populateUi(ui: MainControllerUi) {
+    override fun populateUi(ui: MainControllerUi) {
         // do nothing?
     }
 
-    internal fun onInited() {
+    override fun onInited() {
         mApplicationState.registerForEvents(this)
 
         jbigController.init()
     }
 
-    internal fun onSuspended() {
+    override fun onSuspended() {
         jbigController.suspend()
 
         mApplicationState.unregisterForEvents(this)
@@ -93,7 +91,7 @@ constructor(state: ApplicationState, controller: JbigController) : BaseUiControl
             throw RuntimeException("display is not attached")
         }
 
-        setDisplay(null)
+        // setDisplay(null)
     }
 
     private fun showUiItem(display: IDisplay, item: TabItem) {

@@ -6,6 +6,6 @@ import android.graphics.Bitmap
  * Created by moses on 11/11/2016.
  */
 interface JbigCodec {
-    fun encode(bitmaps: Array<Bitmap>) : Array<Byte>?
-    fun decode(data: Array<Byte>): Array<Bitmap>?
+    fun encode(bitmaps: Array<Bitmap>) : ByteArray?
+    fun decode(data: ByteArray): Array<Bitmap>?
 }

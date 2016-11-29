@@ -10,14 +10,14 @@ class JniJbigCodec : JbigCodec{
         System.loadLibrary("jbigkit")
     }
 
-    override fun encode(bitmaps: Array<Bitmap>): Array<Byte>? {
+    override fun encode(bitmaps: Array<Bitmap>): ByteArray? {
         return encodeNative(bitmaps)
     }
 
-    override fun decode(data: Array<Byte>): Array<Bitmap>? {
+    override fun decode(data: ByteArray): Array<Bitmap>? {
         return decodeNative(data)
     }
 
-    external fun encodeNative(bitmaps: Array<Bitmap>): Array<Byte>?
-    external fun decodeNative(data: Array<Byte>): Array<Bitmap>?
+    external fun encodeNative(bitmaps: Array<Bitmap>): ByteArray?
+    external fun decodeNative(data: ByteArray): Array<Bitmap>?
 }

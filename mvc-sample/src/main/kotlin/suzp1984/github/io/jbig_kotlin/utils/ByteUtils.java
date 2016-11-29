@@ -6,7 +6,7 @@ package suzp1984.github.io.jbig_kotlin.utils;
 
 public class ByteUtils {
 
-    public static String byteArray2HexString(Byte[] arr) {
+    public static String byteArray2HexString(byte[] arr) {
         if (arr == null || arr.length == 0) {
             return null;
         }
