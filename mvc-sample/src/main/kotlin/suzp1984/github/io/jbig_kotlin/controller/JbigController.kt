@@ -6,6 +6,7 @@ import com.squareup.otto.Subscribe
 import io.github.suzp1984.jbig_android_library.JbigCodecFactory
 import suzp1984.github.io.jbig_kotlin.states.JbigDbState
 import suzp1984.github.io.jbig_kotlin.utils.ByteUtils
+import suzp1984.github.io.jbig_kotlin.extensions.byteArray2HexString
 
 /**
  * Created by suzhenxi on 11/29/2016.
@@ -36,8 +37,7 @@ class JbigController : BaseUiController<JbigController.JbigControllerUi, JbigCon
                         mJbigDbState.putJbig(jbigData)
                     }
 
-                    val serializedJbig = ByteUtils.byteArray2HexString(jbigData)
-                    Log.e("Encode", serializedJbig)
+                    Log.e("Encode", jbigData?.byteArray2HexString())
                 }
             }
 
