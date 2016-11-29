@@ -5,7 +5,6 @@ import android.util.Log
 import com.squareup.otto.Subscribe
 import io.github.suzp1984.jbig_android_library.JbigCodecFactory
 import suzp1984.github.io.jbig_kotlin.states.JbigDbState
-import suzp1984.github.io.jbig_kotlin.utils.ByteUtils
 import suzp1984.github.io.jbig_kotlin.extensions.byteArray2HexString
 
 /**
