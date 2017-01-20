@@ -7,7 +7,7 @@ package suzp1984.github.io.jbig_kotlin.db
 interface DataBaseHelper {
     val jbigs: List<ByteArray>
 
-    fun getJbig(position: Int): ByteArray
+    fun getJbig(position: Int): ByteArray?
 
     fun put(jbig: ByteArray)
 
